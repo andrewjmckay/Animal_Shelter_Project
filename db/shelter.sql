@@ -16,4 +16,4 @@ CREATE TABLE animals (
   owner_id SERIAL4 REFERENCES owner(id) ON DELETE CASCADE,
 );
 
--- what is delete cascade doing?
+-- what is on delete cascade doing?
