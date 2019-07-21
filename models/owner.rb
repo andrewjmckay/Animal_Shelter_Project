@@ -8,7 +8,8 @@ class Owner
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @pet = []
+    @owned_pet = []
+    # do I need empty array to put pets into?
   end
 
 end
