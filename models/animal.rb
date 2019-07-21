@@ -13,10 +13,11 @@ class Animal
     @name = options['name']
     @type = options['type']
     @breed = options['breed']
+    @admission_date = options['admission_date'].to_i
     @ready_for_adoption = options['ready_for_adoption'] ||= false
     # “double-pipe equals” is an operator that assigns a value, much like = or our classic assignment operator,
     # but will only complete the assignment if the left side of our operation returns false or nil.
-    @admission_date = options['admission_date']
+
     # do I add owner_id here?
   end
 
