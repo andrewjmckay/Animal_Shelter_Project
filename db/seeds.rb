@@ -83,21 +83,21 @@ animal4 = Animal.new({
     owner1 = Owner.new({
       'name' => 'Craig Sandilands',
       })
-      owner1.save()
+    owner1.save()
 
-      owner1 = Owner.new({
-        'name' => 'Pavlina Houdkova',
-        })
-        owner1.save()
+    owner1 = Owner.new({
+      'name' => 'Pavlina Houdkova',
+      })
+    owner1.save()
 
-        owner1 = Owner.new({
-          'name' => 'Ruairidh Sutherland',
-          })
-        owner1.save()
+    owner1 = Owner.new({
+      'name' => 'Ruairidh Sutherland',
+      })
+    owner1.save()
 
-        owner1 = Owner.new({
-          'name' => 'Jenna Gellatly',
-          })
-        owner1.save()
+    owner1 = Owner.new({
+      'name' => 'Jenna Gellatly',
+      })
+    owner1.save()
 binding.pry
 nil
