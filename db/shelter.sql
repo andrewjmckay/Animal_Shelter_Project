@@ -15,5 +15,3 @@ CREATE TABLE animals (
   admission_date VARCHAR(255),
   owner_id SERIAL4 REFERENCES owner(id) ON DELETE CASCADE,
 );
-
--- what is on delete cascade doing?

@@ -21,4 +21,19 @@ class Animal
     # do I add owner_id here?
   end
 
+  def save()
+    sql = "INSERT INTO animal
+    (
+      name,
+      type,
+      breed,
+      admission_date,
+      ready_for_adoption
+      )
+      VALUES ($1, $2, $3, $4, $5)
+      RETURNING id"
+    values = [@name, @type, @breed, @admission_date, @ready_for_adoption]
+    @id = SqlRunner.run(sql, values).first["id"].to_i
+  end
+
 end
