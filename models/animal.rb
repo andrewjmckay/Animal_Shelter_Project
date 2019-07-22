@@ -23,7 +23,7 @@ class Animal
   end
 
   def save()
-    sql = "INSERT INTO animal
+    sql = "INSERT INTO animals
     (
       name,
       type,
@@ -38,6 +38,11 @@ class Animal
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
 
-  
-
+  def self.all()
+    sql = "SELECT * FROM animals"
+    animals = SqlRunner.run(sql)
+    result = animals.map { |animal| Animal.new(animal) }
+    return result
+  end
+# where does the animal argument come from after Animal.new?
 end
