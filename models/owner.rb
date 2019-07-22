@@ -8,7 +8,7 @@ class Owner
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @owned_pet = []
+    # @owned_pet = []
     # do I need empty array to put pets into? options?
   end
 
@@ -23,5 +23,11 @@ class Owner
     values = [@name, @owned_pet]
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
+
+  def list_all_owners
+
+  end
+
+
 
 end

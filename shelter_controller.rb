@@ -1,2 +1,5 @@
 require('sinatra')
 require('sinatra/reloader')
+require_relative('./models/owner.rb')
+require_relative('./models/animal.rb')
+also_reload('./models/*')
