@@ -24,10 +24,12 @@ class Owner
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
 
-  def list_all_owners
-
-  end
-
+  def self.all()
+      sql = "SELECT * FROM owners"
+      owners = SqlRunner.run(sql)
+      result = owners.map { |owner| Owner.new(owner) }
+      return result
+    end
 
 
 end
