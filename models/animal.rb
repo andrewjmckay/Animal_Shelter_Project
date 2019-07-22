@@ -36,4 +36,8 @@ class Animal
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
 
+  def assign_to_owner
+
+  end
+
 end
