@@ -38,16 +38,6 @@ class Animal
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
 
-  def assign_to_owner
-
-  end
-
-  def are_they_adoptable
-
-  end
-
-  def list_all_adopted_animals
-
-  end
+  
 
 end
