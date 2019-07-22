@@ -45,4 +45,15 @@ class Animal
     return result
   end
 # where does the animal argument come from after Animal.new?
+def self.find_ready_for_adoption(ready_for_adoption)
+  sql = "SELECT * FROM animals
+  WHERE ready_for_adoption = $1"
+  # what does = $1 mean? Why not true?
+  values = [ready_for_adoption]
+  animals = SqlRunner.run(sql, values)
+  result = animals.map { |animal| Animal.new(animal) }
+  return result
+end
+
+
 end
