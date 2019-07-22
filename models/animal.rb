@@ -15,6 +15,7 @@ class Animal
     @breed = options['breed']
     @admission_date = options['admission_date'].to_i
     @ready_for_adoption = options['ready_for_adoption'] ||= false
+    @owner_id = options['owner_id']
     # “double-pipe equals” is an operator that assigns a value, much like = or our classic assignment operator,
     # but will only complete the assignment if the left side of our operation returns false or nil.
 
@@ -28,11 +29,12 @@ class Animal
       type,
       breed,
       admission_date,
-      ready_for_adoption
+      ready_for_adoption,
+      owner_id
       )
-      VALUES ($1, $2, $3, $4, $5)
+      VALUES ($1, $2, $3, $4, $5, $6)
       RETURNING id"
-    values = [@name, @type, @breed, @admission_date, @ready_for_adoption]
+    values = [@name, @type, @breed, @admission_date, @ready_for_adoption, @owner_id]
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
 
@@ -41,7 +43,7 @@ class Animal
   end
 
   def are_they_adoptable
-      
+
   end
 
   def list_all_adopted_animals

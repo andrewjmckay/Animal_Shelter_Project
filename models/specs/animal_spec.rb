@@ -8,13 +8,15 @@ class Animal < MiniTest::Test
 
   def setup
 
-@options = Animal.new({
+options = Animal.new({
   'name' => 'Bolt',
   'type' => 'Dog'
   'breed' => 'Australian Shephard',
   'admission_date' => '23.04.19',
   'ready_for_adoption' => true
   })
+
+  @animal1 = Animal.new(options)
 
   end
 

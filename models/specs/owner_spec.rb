@@ -7,9 +7,11 @@ require_relative('../animal.rb')
 class Owner < MiniTest::Test
 
   def setup
-    @owner = Owner.new({
+    owner = Owner.new({
       'name' => 'Ruairidh Sutherland',
       })
+
+      @owner1 = Owner1.new(options)
   end
 
 def test_list_all_owners
