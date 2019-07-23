@@ -38,13 +38,28 @@ class Animal
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
 
+  def update()
+      sql = "UPDATE animals
+      SET (name, type, breed, admission_date, owner_id, adoption_ready) = ($1, $2, $3, $4, $5, $6)
+      WHERE id = $7;"
+      values = [@name, @type, @breed, @admission_date, @owner_id, @adoption_ready, @id]
+      SqlRunner.run(sql, values)
+    end
+
+
   def self.all()
     sql = "SELECT * FROM animals"
     animals = SqlRunner.run(sql)
     result = animals.map { |animal| Animal.new(animal) }
     return result
   end
-# where does the animal argument come from after Animal.new?
+
+
+delete
+
+delete all
+
+update
 
 def self.find_ready_for_adoption(ready_for_adoption)
   sql = "SELECT * FROM animals

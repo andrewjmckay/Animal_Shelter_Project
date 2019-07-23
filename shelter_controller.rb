@@ -6,6 +6,13 @@ require_relative('./models/owner.rb')
 require_relative('./models/animal.rb')
 also_reload('./models/*')
 
+# home
+
+get '/' do
+  @animals = Animal.all()
+  erb(:"home")
+end
+
 # show all animals
 
 get '/shelter/animals' do

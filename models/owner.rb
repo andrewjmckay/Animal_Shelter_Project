@@ -1,5 +1,5 @@
 require_relative('../db/sql_runner.rb')
-require_relative('/animal.rb')
+require_relative('animal.rb')
 
 class Owner
 
@@ -25,6 +25,9 @@ class Owner
     values = [@name, @owned_pet]
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
+ 
+
+  delete all
 
   def self.all()
       sql = "SELECT * FROM owners"
