@@ -1,0 +1,21 @@
+<% @animals.each do |animal| %>
+<p>Name: <%= animal.name %></p>
+<p>Type: <%= animal.type %></p>
+<p>Breed: <%= animal.breed %></p>
+<p>Admission_date: <%= animal.admission_date %></p>
+<p>Ready_for_adoption: <%= animal.ready_for_adoption %></p>
+<!-- <p><a href="/students/<%= student.id %>"> Show Student</a></p> -->
+<!-- what is this last line doing -->
+
+
+<hr/>
+
+<% end %>
+
+@id = options['id'].to_i if options['id']
+@name = options['name']
+@type = options['type']
+@breed = options['breed']
+@admission_date = options['admission_date'].to_i
+@ready_for_adoption = options['ready_for_adoption'] ||= false
+@owner_id = options['owner_id']

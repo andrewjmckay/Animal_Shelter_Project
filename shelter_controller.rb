@@ -8,9 +8,9 @@ also_reload('./models/*')
 
 
 # home
-get '/' do
-  erb(:index)
-end
+# get '/' do
+#   erb(:index)
+# end
 
 # show animals
 
