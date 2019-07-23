@@ -6,20 +6,14 @@ require_relative('./models/owner.rb')
 require_relative('./models/animal.rb')
 also_reload('./models/*')
 
-
-# home
-# get '/' do
-#   erb(:index)
-# end
-
-# show animals
+# show all animals
 
 get '/shelter/animals' do
   @animals = Animal.all()
   erb(:"animals/index")
 end
 
-# show owners
+# show all owners
 
 get '/shelter/owners' do
   @owners = Owner.all
@@ -27,3 +21,7 @@ get '/shelter/owners' do
 end
 
 # assign animal to new owner
+get '/shelter/animals' do
+  @animals = Animal.all()
+  erb(:"animals/assign")
+end

@@ -42,10 +42,6 @@ class Owner
       return adopted_animals
     end
 
-
-# how to return adopted animals?
+# is the animal method correct? I still dont fully understand dollar signs
 
 end
-
-
-@owner.animals()
