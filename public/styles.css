@@ -8,3 +8,9 @@ body {
 h1 {
   text-align: center;
 }
+
+.img-sizing {
+  width: 500px;
+  heigth: 200px;
+  object-fit: contain;
+}
