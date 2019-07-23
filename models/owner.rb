@@ -10,8 +10,6 @@ class Owner
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    # @owned_pet = []
-    # do I need empty array to put pets into? options?
   end
 
   def save()
@@ -53,7 +51,5 @@ class Owner
       adopted_animals = results.map { |animal| Animal.new(animal)}
       return adopted_animals
     end
-
-# is the animal method correct? I still dont fully understand dollar signs
 
 end

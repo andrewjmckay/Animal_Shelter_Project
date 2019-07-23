@@ -9,7 +9,6 @@ also_reload('./models/*')
 # home
 
 get '/' do
-  @animals = Animal.all()
   erb(:"home")
 end
 
