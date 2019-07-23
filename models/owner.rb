@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('../animal.rb')
 
 class Owner
 
@@ -30,8 +31,17 @@ class Owner
       owners = SqlRunner.run(sql)
       result = owners.map { |owner| Owner.new(owner) }
       return result
-    end
+  end
+
+  def animals()
+    # write sql to find all animals whose owner_id is the same as the owner's id (@id)
+    # return all animals via SqlRunner
+    # map the data to create animal objects
+  end
 
 # how to return adopted animals?
 
 end
+
+
+@owner.animals()

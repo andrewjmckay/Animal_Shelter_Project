@@ -2,12 +2,33 @@ require_relative('../models/animal.rb')
 require_relative('../models/owner.rb')
 require('pry')
 
+owner1 = Owner.new({
+  'name' => 'Craig Sandilands',
+  })
+owner1.save()
+
+owner2 = Owner.new({
+  'name' => 'Pavlina Houdkova',
+  })
+owner2.save()
+
+owner3 = Owner.new({
+  'name' => 'Ruairidh Sutherland',
+  })
+owner3.save()
+
+owner4 = Owner.new({
+  'name' => 'Jenna Gellatly',
+  })
+owner4.save()
+
 animal1 = Animal.new({
   'name' => 'Bolt',
   'type' => 'Dog'
   'breed' => 'Australian Shephard',
   'admission_date' => '23.04.19',
-  'ready_for_adoption' => true
+  'ready_for_adoption' => true,
+  'owner_id' => owner1.id
   })
 
   animal1.save()
@@ -80,24 +101,6 @@ animal4 = Animal.new({
     })
     animal8.save()
 
-    owner1 = Owner.new({
-      'name' => 'Craig Sandilands',
-      })
-    owner1.save()
 
-    owner1 = Owner.new({
-      'name' => 'Pavlina Houdkova',
-      })
-    owner1.save()
-
-    owner1 = Owner.new({
-      'name' => 'Ruairidh Sutherland',
-      })
-    owner1.save()
-
-    owner1 = Owner.new({
-      'name' => 'Jenna Gellatly',
-      })
-    owner1.save()
 binding.pry
 nil

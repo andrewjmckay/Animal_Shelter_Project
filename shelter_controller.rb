@@ -16,14 +16,14 @@ also_reload('./models/*')
 
 get '/shelter/animals' do
   @animals = Animal.all()
-  erb(:animals)
+  erb(:"animals/index")
 end
 
 # show owners
 
 get '/shelter/owners' do
   @owners = Owner.all
-  erb(:owners)
+  erb(:"owners/index")
 end
 
 # assign animal to new owner
