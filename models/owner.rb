@@ -25,9 +25,11 @@ class Owner
     values = [@name, @owned_pet]
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
- 
 
-  delete all
+  def self.delete_all()
+      sql = "DELETE FROM owners"
+      SqlRunner.run(sql)
+    end
 
   def self.all()
       sql = "SELECT * FROM owners"

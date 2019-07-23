@@ -67,12 +67,6 @@ class Animal
   end
 
 
-delete
-
-delete all
-
-update
-
 def self.find_ready_for_adoption(ready_for_adoption)
   sql = "SELECT * FROM animals
   WHERE ready_for_adoption = $1"
