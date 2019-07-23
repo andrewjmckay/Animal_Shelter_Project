@@ -26,6 +26,13 @@ class Owner
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
 
+  def update()
+    sql = "UPDATE owners
+    SET (name) = ($1) WHERE id = $2;"
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.delete_all()
       sql = "DELETE FROM owners"
       SqlRunner.run(sql)
