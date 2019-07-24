@@ -13,14 +13,13 @@ class Owner
   end
 
   def save()
-    sql = "INSERT INTO owner
+    sql = "INSERT INTO owners
     (
-      name,
-      owned_pet
+      name
       )
-      VALUES ($1, $2)
+      VALUES ($1)
       RETURNING id"
-    values = [@name, @owned_pet]
+    values = [@name]
     @id = SqlRunner.run(sql, values).first["id"].to_i
   end
 

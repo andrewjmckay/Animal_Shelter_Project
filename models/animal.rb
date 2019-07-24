@@ -40,7 +40,7 @@ class Animal
 
   def update()
       sql = "UPDATE animals
-      SET (name, type, breed, admission_date, owner_id, adoption_ready) = ($1, $2, $3, $4, $5, $6)
+      SET (name, type, breed, admission_date, owner_id, ready_for_adoption) = ($1, $2, $3, $4, $5, $6)
       WHERE id = $7;"
       values = [@name, @type, @breed, @admission_date, @owner_id, @adoption_ready, @id]
       SqlRunner.run(sql, values)
@@ -66,16 +66,24 @@ class Animal
     return result
   end
 
+  def self.find(id)
+      sql = "SELECT * FROM animals
+      WHERE id = $1"
+      values = [id]
+      animal = SqlRunner.run(sql, values)
+      result = Animal.new(animal.first)
+      return result
+    end
 
-def self.find_ready_for_adoption(ready_for_adoption)
-  sql = "SELECT * FROM animals
-  WHERE ready_for_adoption = $1"
-  # what does = $1 mean? Why not true?
-  values = [ready_for_adoption]
-  animals = SqlRunner.run(sql, values)
-  result = animals.map { |animal| Animal.new(animal) }
-  return result
-end
+# def self.find_ready_for_adoption(ready_for_adoption)
+#   sql = "SELECT * FROM animals
+#   WHERE ready_for_adoption = $1"
+#   # what does = $1 mean? Why not true?
+#   values = [ready_for_adoption]
+#   animals = SqlRunner.run(sql, values)
+#   result = animals.map { |animal| Animal.new(animal) }
+#   return result
+# end
 
 
 end

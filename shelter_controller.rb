@@ -14,20 +14,20 @@ end
 
 # show all animals
 
-get '/shelter/animals' do
+get '/animals' do
   @animals = Animal.all()
   erb(:"animals/index")
 end
 
 # show all owners
 
-get '/shelter/owners' do
+get '/owners' do
   @owners = Owner.all
   erb(:"owners/index")
 end
 
 # assign animal to new owner
-get '/shelter/animals' do
-  @animals = Animal.all()
+get '/animals/:id/edit' do
+  @animals = Animal.find(params[:id])
   erb(:"animals/edit")
 end

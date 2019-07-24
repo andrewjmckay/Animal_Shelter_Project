@@ -27,7 +27,7 @@ owner4.save()
 
 animal1 = Animal.new({
   'name' => 'Bolt',
-  'type' => 'Dog'
+  'type' => 'Dog',
   'breed' => 'Australian Shephard',
   'admission_date' => '23.04.19',
   'ready_for_adoption' => true,
@@ -38,7 +38,7 @@ animal1 = Animal.new({
 
 animal2 = Animal.new({
   'name' => 'Garfield',
-  'type' => 'Cat'
+  'type' => 'Cat',
   'breed' => 'British Shorthair',
   'admission_date' => '08.02.19',
   'ready_for_adoption' => true
@@ -48,7 +48,7 @@ animal2 = Animal.new({
 
 animal3 = Animal.new({
   'name' => 'Simba',
-  'type' => 'Cat'
+  'type' => 'Cat',
   'breed' => 'Scottish Fold',
   'admission_date' => '11.03.19',
   'ready_for_adoption' => false
@@ -58,7 +58,7 @@ animal3 = Animal.new({
 
 animal4 = Animal.new({
   'name' => 'Dug',
-  'type' => 'Dog'
+  'type' => 'Dog',
   'breed' => 'Siberian Huskey',
   'admission_date' => '03.06.19',
   'ready_for_adoption' => true
@@ -67,7 +67,7 @@ animal4 = Animal.new({
 
   animal5 = Animal.new({
     'name' => 'Gromit',
-    'type' => 'Dog'
+    'type' => 'Dog',
     'breed' => 'Pomeranian',
     'admission_date' => '29.02.19',
     'ready_for_adoption' => false
@@ -76,8 +76,8 @@ animal4 = Animal.new({
     animal5.save()
 
   animal6 = Animal.new({
-    'name' => 'Thomas O'Malley',
-    'type' => 'Cat'
+    'name' => "Thomas O'Malley",
+    'type' => 'Cat',
     'breed' => 'Ragamuffin',
     'admission_date' => '09.05.19',
     'ready_for_adoption' => true
@@ -87,7 +87,7 @@ animal4 = Animal.new({
 
   animal7 = Animal.new({
     'name' => 'Grumpy Cat',
-    'type' => 'Cat'
+    'type' => 'Cat',
     'breed' => 'Ragdoll',
     'admission_date' => '13.06.19',
     'ready_for_adoption' => false
@@ -97,7 +97,7 @@ animal4 = Animal.new({
 
   animal8 = Animal.new({
     'name' => 'Scooby-Doo',
-    'type' => 'Dog'
+    'type' => 'Dog',
     'breed' => 'Akita Inu',
     'admission_date' => '25.02.19',
     'ready_for_adoption' => true
