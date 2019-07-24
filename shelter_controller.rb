@@ -28,6 +28,7 @@ end
 
 # assign animal to new owner
 get '/animals/:id/edit' do
-  @animals = Animal.find(params[:id])
+  @animal = Animal.find(params[:id])
+  @owners = Owner.all()
   erb(:"animals/edit")
 end
