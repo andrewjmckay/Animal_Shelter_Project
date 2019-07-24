@@ -8,11 +8,13 @@ body {
 h1 {
   text-align: center;
   color:black;
+  padding-left: 650px;
 }
 
 .color {
   text-align: center;
   color:black;
+  padding-left: 665px;
 }
 
 .img-sizing {
@@ -28,11 +30,12 @@ h1 {
 
 .li {
   text-align: center;
+  padding-left: 600px;
 }
 
-.image {
+body {
   background-image:url("https://www.warrenphotographic.co.uk/photography/bigs/18020-Sleepy-Cocker-Spaniel-pup-with-ginger-kitten-white-background.jpg");
-  height: 1000px;
-  object-fit:contain;
-  width: 100%;
+  background-size: cover;
+  height: 700px;
+
 }
