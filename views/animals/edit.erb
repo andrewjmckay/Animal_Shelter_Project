@@ -1,1 +1,28 @@
+<form action="/shelter/animal" method="post">
 
+  <label for="Name">Name:</label>
+  <input type="text" name="Name" id="Name">
+
+  <label for="Type">Type:</label>
+  <input type="text" name="Type" id="Type">
+
+  <label for="Breed">Breed:</label>
+  <select id="Breed" name="Breed">
+
+  <label for="admission_date">Admission Date:</label>
+  <input type="admission_date" name="admission_date">
+
+  <label for="ready_for_adoption">Ready for Adoption:</label>
+  <input type="ready_for_adoption" name="ready_for_adoption">
+
+  <label for="assign-owner">Owner</label>
+  <select name="owner_id" id="assign-owner">
+  <% @owners.each do |owner| %>
+  <% if owner.id == @animal.owner_id %>
+<option value="<%=owner.id %>"><%= owner.name %></option>
+<% end %>
+</select>
+
+<input type='submit' value="Edit">
+
+</form>

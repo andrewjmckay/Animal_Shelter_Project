@@ -29,5 +29,5 @@ end
 # assign animal to new owner
 get '/shelter/animals' do
   @animals = Animal.all()
-  erb(:"animals/assign")
+  erb(:"animals/edit")
 end
