@@ -33,9 +33,10 @@ get '/animals/:id/edit' do
   erb(:"animals/edit")
 end
 
-# need a POST
 post '/animals/:id/edit' do
 @animal = Animal.new(params)
 @animal.save()
 erb(:"animal/edit")
 end
+
+# new animal
