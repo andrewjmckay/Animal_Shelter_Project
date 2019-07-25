@@ -40,3 +40,13 @@ erb(:"animal/edit")
 end
 
 # new animal
+get '/animals/new' do
+  erb(:"animals/new")
+end
+
+post '/animals/new' do
+  params["ready_for_adoption"] = "f" if !params["ready_for_adoption"]
+  @animal = Animal.new(params)
+  @animal.save()
+  erb(:"animals/create")
+end
