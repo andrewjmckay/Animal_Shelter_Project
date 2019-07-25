@@ -26,9 +26,16 @@ get '/owners' do
   erb(:"owners/index")
 end
 
-# assign animal to new owner
+# edit animal
 get '/animals/:id/edit' do
   @animal = Animal.find(params[:id])
   @owners = Owner.all()
   erb(:"animals/edit")
+end
+
+# need a POST
+post '/animals/:id/edit' do
+@animal = Animal.new(params)
+@animal.save()
+erb(:"animal/edit")
 end
